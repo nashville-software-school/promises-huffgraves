@@ -21,18 +21,26 @@ requirejs(
         $("#bookList").html(bookTpl({ books:bookArray }));
       });
     }); */
-    var firebaseBooks = [];
+    var allBooks;
 
     books.getBooks()
       .then(function(firebaseBooks) {
+        firebaseBooks = Object.keys( firebaseBooks ).map(key => firebaseBooks[ key ]);
         console.log('firebaseBooks', firebaseBooks);
+        allBooks = firebaseBooks;
         return types.getTypes();
        })
       .then(function(firebaseTypes) {
-          firebaseBooks = firebaseBooks.map(book => {
+        firebaseTypes = Object.keys( firebaseTypes ).map(key => firebaseTypes[ key ]);
+        
+
+        var bookArray = allBooks.map(book => {
           book.type = _.find(firebaseTypes, { id:book.booktype }).label;
-          console.log('book', book);
-          return book;
+        })
+        
+        //console.log('book', book);
+        
+        return book;
         });
 
         console.log('firebaseTypes', firebaseTypes);
