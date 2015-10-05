@@ -78,22 +78,7 @@ requirejs(
 
     });
 
-//         getbooks.getBooks()
-//       .then(function(firebaseBooks) {
-//         console.log('firebaseBooks', firebaseBooks);
-//         return types.getBookTypes(firebaseBooks);
-//        })
-//       .then(function(firebaseTypes) {
-//           firebaseBooks = firebaseBooks.map(book => {
-//           book.type = _.find(firebaseTypes, { id:book.booktype }).label;
-//           console.log('book', book);
-//           return book;
-//         });
-
-//         console.log('firebaseTypes', firebaseTypes);
-//         console.log('firebaseBooks', firebaseBooks);
-      
-//       })   
+//      
 }) 
   // =======================================
 // 
