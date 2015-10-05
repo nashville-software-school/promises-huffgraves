@@ -1,12 +1,12 @@
 define(function(require) {
   var _ = require("lodash");
-  var Q = require("q");
+  var q = require("q");
 
 
   return {
 
     getBooks: function() {
-      var deferred = Q.defer();
+      var deferred = q.defer();
 
       $.ajax({url: "https://nss-book-store.firebaseio.com/books.json"})
         // XHR was successful
@@ -22,10 +22,10 @@ define(function(require) {
         })
       
         return deferred.promise;  
-        
-      }
 
-    }        
+    }
+
+  }        
       
 })
 

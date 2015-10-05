@@ -1,11 +1,11 @@
 define(function(require) {
-	var Q = require("q");
+	var q = require("q");
   
 
   return {
 
 		getTypes: function() {
-			var deferred = Q.defer();
+			var deferred = q.defer();
 
 			$.ajax({url: "https://nss-book-store.firebaseio.com/booktypes.json"})
 			// XHR was successful
