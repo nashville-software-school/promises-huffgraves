@@ -81,7 +81,7 @@ requirejs(
 //      
 }) 
   // =======================================
-// 
+// example 
 // /*
 //   Now we use those Promises to describe the order of execution, 
 //   and how data flows between each one.

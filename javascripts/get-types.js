@@ -28,16 +28,8 @@ define(function(require) {
           return deferred.promise;
         }
     }
-
 })
 
 
 
 
-
-// =======below is copied from promises.js========
-
- // return {
- //    load: function(fn) {
- //      // This XHR should be in its own require module, not here
- //      $.ajax("https://nss-book-store.firebaseio.com/booktypes.json").done(function(types) {
