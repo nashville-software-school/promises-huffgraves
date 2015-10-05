@@ -71,7 +71,8 @@ requirejs(
           book.type=_.find(types, { id:book.booktype}).label;
           return book;
         })
-
+        // still working
+        // console.log("books", books);
         require(['hbs!../templates/books'], function(bookTpl) {
           $("#bookList").append(bookTpl({ books: books }));
         });

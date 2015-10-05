@@ -5,12 +5,13 @@
 
 
 {{#each books}}
-	<div class="{{booktype}} row">
-		<div class="col-md-9">
-			<h2>{{ title }} by {{ author }}</h2>
+	<div class="{{booktypes}} row">
+		<div class="col-md-7">
+			<h2>{{ title }} </h2>
+			<h3>by {{ author }}</h3>
 			<p>{{synopsis}}</p>
 		</div>
-	  <div class="col-md-3">
+	  <div class="col-md-5">
 	  	<h4>{{type}}</h4>
 	  	<h4>{{publisher}}</h4>
 	  	<h4>{{year}}</h4>
